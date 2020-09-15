@@ -30,7 +30,7 @@
         android:layout_marginBottom="3dp"
         android:layout_toStartOf="@+id/btnAdd"
         android:ems="10"
-        android:hint="add an item here" />
+        android:hint="What do you want to add?" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
