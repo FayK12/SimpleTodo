@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemLongClicked(int position) {
                 //delete item from model
                 items.remove(position);
-                
+
                 //notify adapter
                 itemsAdapter.notifyItemRemoved(position);
                 Toast.makeText(getApplicationContext(), "Item GONE..POOF", Toast.LENGTH_SHORT).show();
