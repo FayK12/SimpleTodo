@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemLongClicked(int position) {
                 //delete item from model
                 items.remove(position);
+                
                 //notify adapter
                 itemsAdapter.notifyItemRemoved(position);
                 Toast.makeText(getApplicationContext(), "Item GONE..POOF", Toast.LENGTH_SHORT).show();
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClicked(int position) {
                 Log.d("MainActivity", "Single click at position " + position);
+
                 //create new activity
                 Intent i = new Intent(MainActivity.this, EditActivity.class);
 
@@ -88,8 +90,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 String todoItem = etItem.getText().toString();
+
                 //add item to model
                 items.add(todoItem);
+
                 //notify adapter that item was added
                 itemsAdapter.notifyItemInserted(items.size() - 1);
                 etItem.setText("");
